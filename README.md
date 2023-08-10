@@ -1,8 +1,10 @@
 # Sky_Detection
 
-This ai can detect whither or not it's seeing a plane, a drone, or a bird using the imagenet. Runs on a Jetson Nano Developer Kit 4GB.  
+This AI can detect whither or not it's seeing a plane, a drone, or a bird using the imagenet. Runs on a Jetson Nano Developer Kit 4GB. \
+<a href="https://imgur.com/bCg7Hqc"><img src="https://i.imgur.com/bCg7Hqc.jpg" title="source: imgur.com" /></a> \
+<a href="https://imgur.com/BoLUj4n"><img src="https://i.imgur.com/BoLUj4n.jpg" title="source: imgur.com" /></a> \
+<a href="https://imgur.com/3WjVYcn"><img src="https://i.imgur.com/3WjVYcn.jpg" title="source: imgur.com" /></a>
 
-![add image descrition here](direct image link here)
 
 ## The Algorithm
 
@@ -10,10 +12,8 @@ The AI trains on a data set that has multiable images of bird, drones, and plane
 -2563 images in total \
 -563 bird images \
 -1000 drone images \
--1000 plane images \
-<a href="https://imgur.com/bCg7Hqc"><img src="https://i.imgur.com/bCg7Hqc.jpg" title="source: imgur.com" /></a> \
-<a href="https://imgur.com/BoLUj4n"><img src="https://i.imgur.com/BoLUj4n.jpg" title="source: imgur.com" /></a> \
-<a href="https://imgur.com/3WjVYcn"><img src="https://i.imgur.com/3WjVYcn.jpg" title="source: imgur.com" /></a>
+-1000 plane images 
+
 ## Running this project
 ## Setting Up Jetson Nano
  1.Click on the green icon at the bottom left of your screen to go to the SSH menu. \
