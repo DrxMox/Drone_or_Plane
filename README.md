@@ -9,14 +9,14 @@ This AI can detect whither or not it's seeing a plane, a drone, or a bird using 
 ## The Algorithm
 
 The AI trains on a data set that has multiable images of bird, drones, and planes. The dataset follows the 10 80 10 rule where 10% goes to testing, 10% goes to val, and 80% goes to training. \
--2563 images in total \
+-2555 images in total \
 -563 bird images \
--1000 drone images \
--1000 plane images 
+-997 drone images \
+-995 plane images 
 
 ## Running this project
-## Setting Up Jetson Nano
- 1.Click on the green icon at the bottom left of your screen to go to the SSH menu. \
+## Setting Up VS code
+ 1.Click on the blue icon at the bottom left of your screen to go to the SSH menu. \
  2.Click on + Add New SSH Host. \
  3.To add a new host Enter ssh nvidia@x.x.x.x, replacing x.x.x.x.x with yourIP address (You can find this on the mobile hotspot on your computer). \
  4.Pick the first configuration file. \
@@ -38,14 +38,16 @@ The AI trains on a data set that has multiable images of bird, drones, and plane
 1.Go to the jetson-inference and run this command ./docker/run.sh. \
 2.Once inside the Docker container, go to jetson-inference/python/training/classification. \
 ## Training the Ai
-1.Run the training script with the following command: python3 train.py --model-dir=models/Name of your model --batch-size=4 --workers=4 --epoch=1 data/waste_detect Replace ANY_NAME_YOU_WANT with your desired output file name. This process may take quite some time. \
+1.Run the training script with the following command: python3 train.py --model-dir=models/Any_Name_You_Want--batch-size=4 --workers=4 --epoch=1 data/Sky_Detection Replace ANY_NAME_YOU_WANT with your desired output file name. This process may take quite some time. \
 2.You can change the batch size, workers, and epochs to improve the Ai \
 3.You can stop the process at any time using Ctl+C. \
+4. run this command to export python3 onnx_export.py --model-dir=models/Name_of_Your_Model
 ## Test the Ai
 1.Press Ctrl + D in the terminal to exit Docker. \
 2.Go back to jetson-inference/python/training/classification. \
 3.Check if the model exists by executing ls models/The name of your model/. You should see a file named resnet18.onnx. \
-4.Set the NET and DATASET variables: NET=models/The name of your model DATASET=data/waste_detect \
+4.Set the NET and DATASET variables: NET=models/The name of your model \
+DATASET=data/Sky_Detection \
 5.To test the AI with an image run this command imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/Direction_To_The_Image_You_Want_To_Test Result_Name \
 Example:imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/bird/01.jpg birdtest.jpg 
 
