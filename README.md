@@ -25,7 +25,7 @@ The AI trains on a data set that has multiable images of bird, drones, and plane
  7.Click Continue. \
  8.Enter your Jetson Nano login, by defualt the username and password should be nvidia \
  9.Select Open Folder and navigate to jetson-inference. \
-10.Click Yes, I trust the authors to access and start working on your projects in this directory. \
+10.Click Yes, I trust the authors to access and start working on your projects in this directory. 
 
 ## Setting Up the Data Set
 1.Go to jetson-inference/python/training/classification/data. \
@@ -36,7 +36,7 @@ The AI trains on a data set that has multiable images of bird, drones, and plane
 6.Distribute the images from your ZIP file among these folders, with 80% in the train folder, 10% in the val folder, and 10% in the test folder. \
 ## Running the Docker Container
 1.Go to the jetson-inference and run this command ./docker/run.sh. \
-2.Once inside the Docker container, go to jetson-inference/python/training/classification. \
+2.Once inside the Docker container, go to jetson-inference/python/training/classification. 
 ## Training the Ai
 1.Run the training script with the following command: python3 train.py --model-dir=models/Any_Name_You_Want--batch-size=4 --workers=4 --epoch=1 data/Sky_Detection Replace ANY_NAME_YOU_WANT with your desired output file name. This process may take quite some time. \
 2.You can change the batch size, workers, and epochs to improve the Ai \
@@ -52,4 +52,4 @@ DATASET=data/Sky_Detection \
 Example:imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/bird/01.jpg birdtest.jpg 
 
 ## Congrats on following the directions!!!!
-[View a video explanation here](video link)
+https://www.youtube.com/watch?v=HFM8xSjSMLc
